@@ -1,0 +1,35 @@
+/* IntroSection.css */
+
+.intro-section {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .about-me {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the order of flex items */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-me p {
+    flex: 1 1 60%;
+    margin-left: 10px; /* Adds space between paragraph and image */
+    text-align: justify; /* Center-align the paragraph */
+  }
+  
+  .about-me img {
+    flex: 1 1 40%;
+    max-width: 20%;
+  }
+  
+  .dark-mode .intro-section {
+    background-color: #000;
+    color: #fff;
+  }

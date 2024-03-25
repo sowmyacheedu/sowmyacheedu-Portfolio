@@ -1,0 +1,69 @@
+/* Footer.css */
+
+/* Ensure the footer is positioned at the bottom of the page */
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .footer-images {
+    background-color: #333;
+    color: #fff;
+    padding: 10px; /* Adjust padding */
+    text-align: center;
+  }
+  
+  .footer-images p {
+    margin-bottom: 10px; /* Add space below the "Get in touch" line */
+  }
+  
+  .footer-images a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .footer-images img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer-images a:hover {
+    transform: scale(1.2);
+  }
+  .footer-images p.thank-you {
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scrollText 20s linear infinite; /* Define animation */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(-100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(100%); /* Scroll to left */
+    }
+}
+.footer-images p.thank-you.invisible {
+    animation: scrollTextReturn 1s linear forwards; /* Define animation when text is off-screen */
+}
+
+@keyframes scrollTextReturn {
+    0% {
+        transform: translateX(100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(-100%); /* Return to left */
+    }
+}

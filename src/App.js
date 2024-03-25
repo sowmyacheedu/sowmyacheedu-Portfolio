@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './Navbar/Navbar';
+import IntroSection from './Intro/Intro';
+import Academic from './Academic/Academic';
+import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
+import Footer from './Footer/Footer';
 import './App.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+    // Toggle dark mode class on document.body
+    document.body.classList.toggle('dark-mode');
+    
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <IntroSection/>
+      <Academic />
+      <Projects />
+      <Skills />
+      <Footer />
     </div>
   );
 }
